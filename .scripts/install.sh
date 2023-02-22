@@ -133,7 +133,7 @@ read -p "Enter what you want to install zsh (Arch, Ubuntu, Mac): " CURRENT_JOB
 if [ $CURRENT_JOB = $ARCH ]; then
   script_print_notify "Selected OS: $CURRENT_JOB"
 
-  sudo pacman -S --needed install zsh
+  sudo pacman -S --needed --noconfirm zsh
 
   cp $HOME/.config/zsh/.zshrc $HOME
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -149,7 +149,7 @@ fi
 if [ $CURRENT_JOB = $UBUNTU ]; then
   script_print_notify "Selected OS: $CURRENT_JOB"
 
-  sudo apt-get install zsh
+  sudo apt-get -y install zsh
 
   cp $HOME/.config/zsh/.zshrc $HOME
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
