@@ -1,6 +1,6 @@
 #!/bin/bash
 #==
-#   NOTE      - buildtags.sh
+#   NOTE      - install.sh
 #   Author    - Asta
 #
 #   Created   - 2022.10.19
