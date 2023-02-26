@@ -63,47 +63,45 @@ if [ $CURRENT_JOB = $ARCH ]; then
   script_print_notify "Selected OS: $CURRENT_JOB"
 
   sudo pacman -S --needed --noconfirm zsh
+  chsh -s /bin/zsh
+  env | grep ^SHELL=
 
   cp $HOME/.config/zsh/.zshrc $HOME
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<-EOF
+	y
+	git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+EOF
 
-  chsh -s $(which zsh)
-  zsh
-  env | grep ^SHELL=
-fi
-
-if [ $CURRENT_JOB = $UBUNTU ]; then
+elif [ $CURRENT_JOB = $UBUNTU ]; then
   script_print_notify "Selected OS: $CURRENT_JOB"
 
   sudo apt-get -y install zsh
+  chsh -s /bin/zsh
+  env | grep ^SHELL=
 
   cp $HOME/.config/zsh/.zshrc $HOME
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<-EOF
+	y
+	git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+EOF
 
-  chsh -s $(which zsh)
-  zsh
-  env | grep ^SHELL=
-fi
-
-if [ $CURRENT_JOB = $MAC ]; then
+elif [ $CURRENT_JOB = $MAC ]; then
   script_print_notify "Selected OS: $CURRENT_JOB"
 
-  cp $HOME/.config/zsh/.zshrc $HOME
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-
-  chsh -s $(which zsh)
-  zsh
+  chsh -s /bin/zsh
   env | grep ^SHELL=
-fi
 
-if [ $CURRENT_JOB = $FONT ]; then
+  cp $HOME/.config/zsh/.zshrc $HOME
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<-EOF
+	y
+	git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+EOF
+
+elif [ $CURRENT_JOB = $FONT ]; then
   echo -ne "Selected Job: $CURRENT_JOB\n"
 
-  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
-  unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip || error_exit "Installation Faild... wget needed."
+  unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/ || error_exit "Installation Faild... unzip needed."
   rm JetBrainsMono.zip
 
   script_print_notify "Make sure you set fonts for your terminal properly.\n"

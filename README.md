@@ -39,7 +39,7 @@ rsync -avxHAXP --exclude={'.git*/','.script','*.git','LICENSE','*.md'} ~/Documen
 > Run *'install.sh'* to install essentials.
 
 ``` bash
-bash ~/Document/openbox-dotfiles/.scripts/install.sh
+bash ~/Documents/openbox-dotfiles/.scripts/install.sh
 ```
 
 </details>
