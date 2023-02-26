@@ -54,8 +54,9 @@ fi
 ARCH=Arch
 UBUNTU=Ubuntu
 MAC=Mac
+FONT=Font
 
-read -p "Enter what you want to install zsh (Arch, Ubuntu, Mac): " CURRENT_JOB
+read -p "Enter what you want to install (Arch, Ubuntu, Mac, Font): " CURRENT_JOB
 
 
 if [ $CURRENT_JOB = $ARCH ]; then
@@ -70,8 +71,6 @@ if [ $CURRENT_JOB = $ARCH ]; then
   chsh -s $(which zsh)
   zsh
   env | grep ^SHELL=
-
-  exit 1
 fi
 
 if [ $CURRENT_JOB = $UBUNTU ]; then
@@ -86,8 +85,6 @@ if [ $CURRENT_JOB = $UBUNTU ]; then
   chsh -s $(which zsh)
   zsh
   env | grep ^SHELL=
-
-  exit 1
 fi
 
 if [ $CURRENT_JOB = $MAC ]; then
@@ -100,6 +97,17 @@ if [ $CURRENT_JOB = $MAC ]; then
   chsh -s $(which zsh)
   zsh
   env | grep ^SHELL=
-
-  exit 1
 fi
+
+if [ $CURRENT_JOB = $FONT ]; then
+  echo -ne "Selected Job: $CURRENT_JOB\n"
+
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
+  unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/
+  rm JetBrainsMono.zip
+
+  script_print_notify "Make sure you set fonts for your terminal properly.\n"
+fi
+
+
+script_print_notify "$CURRENT_JOB installation successfully done.\n"
