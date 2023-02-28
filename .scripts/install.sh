@@ -66,11 +66,13 @@ if [ $CURRENT_JOB = $ARCH ]; then
   chsh -s /bin/zsh
   env | grep ^SHELL=
 
-  cp $HOME/.config/zsh/.zshrc $HOME
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<-EOF
 	y
-	git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 EOF
+
+  git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  cp $HOME/.config/zsh/.zshrc $HOME
+  zsh
 
 elif [ $CURRENT_JOB = $UBUNTU ]; then
   script_print_notify "Selected OS: $CURRENT_JOB"
@@ -79,11 +81,13 @@ elif [ $CURRENT_JOB = $UBUNTU ]; then
   chsh -s /bin/zsh
   env | grep ^SHELL=
 
-  cp $HOME/.config/zsh/.zshrc $HOME
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<-EOF
 	y
-	git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 EOF
+
+  git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  cp $HOME/.config/zsh/.zshrc $HOME
+  zsh
 
 elif [ $CURRENT_JOB = $MAC ]; then
   script_print_notify "Selected OS: $CURRENT_JOB"
@@ -91,15 +95,18 @@ elif [ $CURRENT_JOB = $MAC ]; then
   chsh -s /bin/zsh
   env | grep ^SHELL=
 
-  cp $HOME/.config/zsh/.zshrc $HOME
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" <<-EOF
 	y
-	git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 EOF
+
+  git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  cp $HOME/.config/zsh/.zshrc $HOME
+  zsh
 
 elif [ $CURRENT_JOB = $FONT ]; then
   echo -ne "Selected Job: $CURRENT_JOB\n"
 
+  mkdir -p $HOME/.local/share/fonts/
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip || error_exit "Installation Faild... wget needed."
   unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/ || error_exit "Installation Faild... unzip needed."
   rm JetBrainsMono.zip
