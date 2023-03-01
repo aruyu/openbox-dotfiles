@@ -17,11 +17,12 @@
 #xfce-mcs-manager &
 
 
-#bash ${HOME}/.screenlayout/default.sh &
+#bash $HOME/.screenlayout/default.sh &
 xfce4-power-manager &
 
 plank &
 nitrogen --force-setter=xinerama --restore &
+# killall plank ; plank
 
 picom &
 setxkbmap us,kr &
