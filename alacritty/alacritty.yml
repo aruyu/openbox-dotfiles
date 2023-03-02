@@ -136,35 +136,35 @@ custom_cursor_colors: true
 colors:
   # Primary colors
   primary:
-    background: '0x252526'
+    background: '0x1E1E1E'
     foreground: '0xD4D4D4'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x252526'
+    text: '0x1E1E1E'
     cursor: '0xD4D4D4'
 
   # Normal colors
   normal:
-    black:   '0x252526'
+    black:   '0x1E1E1E'
     red:     '0xDF301B'
     green:   '0x90D521'
     yellow:  '0xFFC620'
     blue:    '0x569CD6'
     magenta: '0x8763B8'
     cyan:    '0x4EC9B0'
-    white:   '0xEBEBEB'
+    white:   '0xD4D4D4'
 
   # Bright colors
   bright:
     black:   '0x6D7070'
     red:     '0xDF4352'
     green:   '0xA8D466'
-    yellow:  '0xFFD750'
-    blue:    '0x569CD6'
+    yellow:  '0xFFD850'
+    blue:    '0x56ACEF'
     magenta: '0xA578EA'
-    cyan:    '0x4EC9B0'
-    white:   '0xFEFEF8'
+    cyan:    '0x4FDFC0'
+    white:   '0xFEFEFE'
 
   # Indexed Colors
   #
