@@ -16,7 +16,7 @@ git clone https://github.com/astaos/openbox-dotfiles.git ~/.config
 > Run *'install.sh'* to install essentials.
 
 ```bash
-bash ~/.config/.scripts/install.sh
+bash ~/.config/tools/install.sh
 ```
 
 </details>
@@ -33,13 +33,13 @@ git clone https://github.com/astaos/openbox-dotfiles.git ~/Documents/openbox-dot
 > Use rsync to sync the dotfiles.
 
 ```bash
-rsync -avxHAXP --exclude={'.git*/','.script','*.git','LICENSE','*.md'} ~/Documents/openbox-dotfiles/* ~/.config/
+rsync -avxHAXP --exclude={'.git*/','*.git','tools','LICENSE','*.md'} ~/Documents/openbox-dotfiles/* ~/.config/
 ```
 
 > Run *'install.sh'* to install essentials.
 
 ``` bash
-bash ~/Documents/openbox-dotfiles/.scripts/install.sh
+bash ~/Documents/openbox-dotfiles/tools/install.sh
 ```
 
 </details>
