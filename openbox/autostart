@@ -17,7 +17,7 @@
 #xfce-mcs-manager &
 
 
-xfsettingsd &
+#bash $HOME/.screenlayout/default.sh &
 xfce4-power-manager &
 picom &
 
@@ -25,6 +25,4 @@ plank &
 # killall plank ; plank
 
 ibus-daemon -drx &
-
-sleep 3 &
 nitrogen --force-setter=xinerama --restore &
