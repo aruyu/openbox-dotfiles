@@ -1,6 +1,6 @@
 #!/bin/bash
 #==
-#   NOTE      - install.sh
+#   NOTE      - install_zsh.sh
 #   Author    - Asta
 #
 #   Created   - 2022.10.19
