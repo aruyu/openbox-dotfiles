@@ -8,61 +8,50 @@
     <item label="Web Browser"><action name="Execute"><command><![CDATA[xdg-open http://]]></command></action></item>
     <item label="Run command"><action name="Execute"><command><![CDATA[gmrun]]></command></action></item>
   <separator label="Categories"/>
-  <menu id="0.0399963421086831" label="Accessories">
+  <menu id="0.325616790986718" label="Accessories">
     <item label="About Xfce"><action name="Execute"><command><![CDATA[xfce4-about]]></command></action></item>
     <item label="Archive Manager"><action name="Execute"><command><![CDATA[file-roller]]></command></action></item>
     <item label="Bulk Rename"><action name="Execute"><command><![CDATA[thunar --bulk-rename]]></command></action></item>
-    <item label="File Manager"><action name="Execute"><command><![CDATA[exo-open --launch FileManager]]></command></action></item>
     <item label="Neovim"><action name="Execute"><command><![CDATA[xterm -e 'nvim']]></command></action></item>
     <item label="nitrogen"><action name="Execute"><command><![CDATA[nitrogen]]></command></action></item>
     <item label="picom"><action name="Execute"><command><![CDATA[picom]]></command></action></item>
     <item label="Plank"><action name="Execute"><command><![CDATA[plank]]></command></action></item>
-    <item label="Terminal Emulator"><action name="Execute"><command><![CDATA[exo-open --launch TerminalEmulator]]></command></action></item>
     <item label="Vim"><action name="Execute"><command><![CDATA[xterm -e 'vim']]></command></action></item>
   </menu>
-  <menu id="0.301905048635916" label="Development">
+  <menu id="0.491966747070791" label="Development">
     <item label="Code - OSS"><action name="Execute"><command><![CDATA[/usr/bin/code-oss --unity-launch]]></command></action></item>
     <item label="Electron 19"><action name="Execute"><command><![CDATA[electron19]]></command></action></item>
   </menu>
-  <menu id="0.411840745751885" label="Graphics">
+  <menu id="0.749028411965025" label="Graphics">
     <item label="GNU Image Manipulation Program"><action name="Execute"><command><![CDATA[gimp-2.10]]></command></action></item>
     <item label="Inkscape"><action name="Execute"><command><![CDATA[inkscape]]></command></action></item>
     <item label="Viewnior"><action name="Execute"><command><![CDATA[viewnior]]></command></action></item>
   </menu>
-  <menu id="0.239403568065377" label="Multimedia">
+  <menu id="0.801193178255694" label="Multimedia">
     <item label="mpv Media Player"><action name="Execute"><command><![CDATA[mpv --player-operation-mode=pseudo-gui --]]></command></action></item>
     <item label="PulseAudio Volume Control"><action name="Execute"><command><![CDATA[pavucontrol]]></command></action></item>
     <item label="Qt V4L2 test Utility"><action name="Execute"><command><![CDATA[qv4l2]]></command></action></item>
     <item label="Qt V4L2 video capture utility"><action name="Execute"><command><![CDATA[qvidcap]]></command></action></item>
   </menu>
-  <menu id="0.15545604251118" label="Network">
+  <menu id="0.673184156778991" label="Network">
     <item label="Avahi SSH Server Browser"><action name="Execute"><command><![CDATA[/usr/bin/bssh]]></command></action></item>
     <item label="Avahi VNC Server Browser"><action name="Execute"><command><![CDATA[/usr/bin/bvnc]]></command></action></item>
     <item label="Chromium"><action name="Execute"><command><![CDATA[/usr/bin/chromium]]></command></action></item>
-    <item label="Mail Reader"><action name="Execute"><command><![CDATA[exo-open --launch MailReader]]></command></action></item>
-    <item label="Web Browser"><action name="Execute"><command><![CDATA[exo-open --launch WebBrowser]]></command></action></item>
   </menu>
-  <menu id="0.236458594663404" label="Settings">
-    <item label="Accessibility"><action name="Execute"><command><![CDATA[xfce4-accessibility-settings]]></command></action></item>
+  <menu id="0.628914283108301" label="Settings">
     <item label="Advanced Network Configuration"><action name="Execute"><command><![CDATA[nm-connection-editor]]></command></action></item>
-    <item label="Appearance"><action name="Execute"><command><![CDATA[xfce4-appearance-settings]]></command></action></item>
-    <item label="Color Profiles"><action name="Execute"><command><![CDATA[xfce4-color-settings]]></command></action></item>
-    <item label="Default Applications"><action name="Execute"><command><![CDATA[xfce4-mime-settings]]></command></action></item>
-    <item label="Display"><action name="Execute"><command><![CDATA[xfce4-display-settings]]></command></action></item>
+    <item label="ARandR"><action name="Execute"><command><![CDATA[arandr]]></command></action></item>
+    <item label="Customize Look and Feel"><action name="Execute"><command><![CDATA[lxappearance]]></command></action></item>
     <item label="File Manager Settings"><action name="Execute"><command><![CDATA[thunar-settings]]></command></action></item>
     <item label="IBus Preferences"><action name="Execute"><command><![CDATA[ibus-setup]]></command></action></item>
-    <item label="Keyboard"><action name="Execute"><command><![CDATA[xfce4-keyboard-settings]]></command></action></item>
-    <item label="Mouse and Touchpad"><action name="Execute"><command><![CDATA[xfce4-mouse-settings]]></command></action></item>
+    <item label="Keyboard and Mouse"><action name="Execute"><command><![CDATA[lxinput]]></command></action></item>
     <item label="Notifications"><action name="Execute"><command><![CDATA[xfce4-notifyd-config]]></command></action></item>
-    <item label="Openbox Configuration Manager"><action name="Execute"><command><![CDATA[obconf]]></command></action></item>
     <item label="Power Manager"><action name="Execute"><command><![CDATA[xfce4-power-manager-settings]]></command></action></item>
     <item label="PulseAudio Volume Control"><action name="Execute"><command><![CDATA[pavucontrol]]></command></action></item>
     <item label="Removable Drives and Media"><action name="Execute"><command><![CDATA[thunar-volman-settings]]></command></action></item>
-    <item label="Settings Editor"><action name="Execute"><command><![CDATA[xfce4-settings-editor]]></command></action></item>
-    <item label="Settings Manager"><action name="Execute"><command><![CDATA[xfce4-settings-manager]]></command></action></item>
     <item label="Tint2 Settings"><action name="Execute"><command><![CDATA[tint2conf]]></command></action></item>
   </menu>
-  <menu id="0.786572930539787" label="System">
+  <menu id="0.60475136050658" label="System">
     <item label="Alacritty"><action name="Execute"><command><![CDATA[alacritty]]></command></action></item>
     <item label="Avahi Zeroconf Browser"><action name="Execute"><command><![CDATA[/usr/bin/avahi-discover]]></command></action></item>
     <item label="Hardware Locality lstopo"><action name="Execute"><command><![CDATA[lstopo]]></command></action></item>
@@ -71,10 +60,10 @@
     <item label="Tint2"><action name="Execute"><command><![CDATA[tint2]]></command></action></item>
   </menu>
   <separator/>
-  <menu id="0.273845458909896" label="Advanced Settings">
+  <menu id="0.84843094581182" label="Advanced Settings">
     <item label="Conky RC"><action name="Execute"><command><![CDATA[geany ~/.conkyrc]]></command></action></item>
     <item label="Tint2 Panel"><action name="Execute"><command><![CDATA[geany ~/.config/tint2/tint2rc]]></command></action></item>
-  <menu id="0.519809841868128" label="Obmenu-Generator">
+  <menu id="0.854485859620045" label="Obmenu-Generator">
     <item label="Menu Schema"><action name="Execute"><command><![CDATA[geany ~/.config/obmenu-generator/schema.pl]]></command></action></item>
     <item label="Menu Config"><action name="Execute"><command><![CDATA[geany ~/.config/obmenu-generator/config.pl]]></command></action></item>
   <separator/>
@@ -86,7 +75,7 @@
   <separator/>
     <item label="Refresh cache"><action name="Execute"><command><![CDATA[obmenu-generator -d]]></command></action></item>
   </menu>
-  <menu id="0.815801724151925" label="Openbox">
+  <menu id="0.754581349029422" label="Openbox">
     <item label="Openbox Autostart"><action name="Execute"><command><![CDATA[geany ~/.config/openbox/autostart]]></command></action></item>
     <item label="Openbox RC"><action name="Execute"><command><![CDATA[geany ~/.config/openbox/rc.xml]]></command></action></item>
     <item label="Openbox Menu"><action name="Execute"><command><![CDATA[geany ~/.config/openbox/menu.xml]]></command></action></item>
