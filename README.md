@@ -16,7 +16,8 @@ git clone https://github.com/astaos/openbox-dotfiles.git ~/.config
 > Run *'install.sh'* to install essentials.
 
 ```bash
-bash ~/.config/tools/install.sh
+bash ~/.config/tools/install_themes.sh
+bash ~/.config/tools/install_zsh.sh
 ```
 
 </details>
@@ -39,7 +40,8 @@ rsync -avxHAXP --exclude={'.git*/','*.git','tools','LICENSE','*.md'} ~/Documents
 > Run *'install.sh'* to install essentials.
 
 ``` bash
-bash ~/Documents/openbox-dotfiles/tools/install.sh
+bash ~/Documents/openbox-dotfiles/tools/install_themes.sh
+bash ~/Documents/openbox-dotfiles/tools/install_zsh.sh
 ```
 
 </details>

@@ -56,26 +56,26 @@ mkdir $HOME/.themes
 
 
 ##======================
-#-- Openbox
-git clone https://github.com/catppuccin/openbox.git $HOME/Documents/catppuccin-openbox/
-cp -rf $HOME/Documents/catppuccin-openbox/Catppuccin-Frappe $HOME/.themes/
+#-- Cursor
+git clone https://github.com/varlesh/oreo-cursors.git $HOME/Documents/oreo-cursors/
+cd $HOME/Documents/oreo-cursors/
+ruby generator/convert.rb || error_exit "Installation Faild... ruby needed."
+make build
+sudo make install
 
 
 ##======================
 #-- GTK
 wget https://github.com/catppuccin/gtk/releases/download/v0.4.1/Catppuccin-Frappe-Standard-Maroon-Dark.zip
-unzip Catppuccin-Frappe-Standard-Maroon-Dark.zip -d $HOME/Documents/
-cp -rf $HOME/Documents/Catppuccin-Frappe-Standard-Maroon-Dark/Catppuccin-Frappe-Standard-Maroon-Dark $HOME/.themes/
+unzip Catppuccin-Frappe-Standard-Maroon-Dark.zip -d $HOME/Documents/catppuccin-gtk/
+cp -rf $HOME/Documents/catppuccin-gtk/Catppuccin-Frappe-Standard-Maroon-Dark $HOME/.themes/
 rm Catppuccin-Frappe-Standard-Maroon-Dark.zip
 
 
 ##======================
-#-- Cursor
-git clone https://github.com/varlesh/oreo-cursors.git $HOME/Documents/oreo-cursors/
-cd $HOME/Documents/oreo-cursors/
-ruby generator/convert.rb
-make build
-sudo make install
+#-- Openbox
+git clone https://github.com/catppuccin/openbox.git $HOME/Documents/catppuccin-openbox/
+cp -rf $HOME/Documents/catppuccin-openbox/Catppuccin-Frappe $HOME/.themes/
 
 
 ##======================
