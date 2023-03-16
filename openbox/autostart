@@ -21,6 +21,7 @@ bash $HOME/.screenlayout/default.sh &
 xfce4-power-manager &
 picom &
 
+tint2 &
 plank &
 # killall plank ; plank
 
