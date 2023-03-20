@@ -74,8 +74,7 @@ rm Catppuccin-Frappe-Standard-Maroon-Dark.zip
 
 ##======================
 #-- Openbox
-git clone https://github.com/catppuccin/openbox.git $HOME/Documents/catppuccin-openbox/
-cp -rf $HOME/Documents/catppuccin-openbox/Catppuccin-Frappe $HOME/.themes/
+cp -rf $HOME/Documents/openbox-dotfiles/Catppuccin-Frappe $HOME/.themes/
 
 
 ##======================
