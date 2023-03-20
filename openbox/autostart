@@ -22,7 +22,7 @@ xfce4-power-manager &
 picom &
 
 tint2 &
-plank &
+cairo-dock &
 # killall plank ; plank
 
 ibus-daemon -drx &
