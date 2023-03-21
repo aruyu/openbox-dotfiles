@@ -43,7 +43,7 @@
   </placement>
   <theme>
     <name>Catppuccin-Frappe</name>
-    <titleLayout>CIMNL</titleLayout>
+    <titleLayout>CIMLN</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon

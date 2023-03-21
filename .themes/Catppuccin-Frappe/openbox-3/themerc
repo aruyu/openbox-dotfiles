@@ -50,7 +50,7 @@ osd.unhilight.bg.color:                                       #303446
 border.width:                                                       0
 padding.width:                                                     10
 padding.height:                                                    10
-window.handle.width:                                                1
+window.handle.width:                                                6
 window.client.padding.width:                                        0
 window.client.padding.height:                                       0
 

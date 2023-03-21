@@ -52,9 +52,6 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 
-mkdir $HOME/.themes
-
-
 ##======================
 #-- Cursor
 git clone https://github.com/varlesh/oreo-cursors.git $HOME/Documents/oreo-cursors/
@@ -74,7 +71,7 @@ rm Catppuccin-Frappe-Standard-Maroon-Dark.zip
 
 ##======================
 #-- Openbox
-cp -rf $HOME/Documents/openbox-dotfiles/Catppuccin-Frappe $HOME/.themes/
+cp -rf $HOME/Documents/openbox-dotfiles/.themes $HOME/ || cp -rf ~/.config/.themes $HOME/
 
 
 ##======================
