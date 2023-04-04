@@ -106,7 +106,10 @@ our $SCHEMA = [
     {end => undef},
 
     ## The xrandr automake command
-    {pipe => ["$ENV{HOME}/.config/openbox/custom-menu/ob-randr.py", "Monitor Settings", "applications-engineering"]},
+    {beg => ['Monitor Settings', 'applications-engineering']},
+      {pipe => ["$ENV{HOME}/.config/openbox/scripts/ob-randr.py", "Monitor", "applications-engineering"]},
+      {item => ["$ENV{HOME}/.config/openbox/scripts/save-randr.py", "Save Settings", "applications-engineering"]},
+    {end => undef},
 
     {sep => undef},
 

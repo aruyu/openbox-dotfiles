@@ -17,13 +17,12 @@
 #xfce-mcs-manager &
 
 
-bash $HOME/.screenlayout/default.sh &
+#bash $HOME/.config/screenrc &
 xfce4-power-manager &
 picom &
 
 tint2 &
 killall plank ; plank &
-plank &
 
 ibus-daemon -drx &
 nitrogen --force-setter=xinerama --restore &
