@@ -22,8 +22,8 @@ xfce4-power-manager &
 picom &
 
 tint2 &
+killall plank ; plank &
 plank &
-# killall plank ; plank
 
 ibus-daemon -drx &
 nitrogen --force-setter=xinerama --restore &
