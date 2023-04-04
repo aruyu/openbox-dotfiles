@@ -1,3 +1,7 @@
+####
+# based on 'https://github.com/catppuccin/openbox'
+# edited by Asta
+##
 # Menu
 
 menu.overlap.x:                                                     0

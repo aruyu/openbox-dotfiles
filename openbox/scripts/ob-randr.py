@@ -59,11 +59,13 @@ def mk_exe_node(output, name, command):
     # A small helper to speed the three-element PITA that is the Openbox execute menu syntax.
     CMD = 'xrandr --output %s ' % output
     nitrogen_restore = "nitrogen --force-setter=xinerama --restore"
+    plank_restore = "killall plank ; plank"
+    command_lists = "sh -c '" + CMD + command + " && " + nitrogen_restore + " && " + plank_restore + "'"
 
     item = etree.Element('item', label=name)
     action = etree.SubElement(item, 'action', name='execute')
 
-    etree.SubElement(action, 'command').text = "sh -c '" + CMD + command + " && " + nitrogen_restore + "'"
+    etree.SubElement(action, 'command').text = command_lists
 
     return item
 
