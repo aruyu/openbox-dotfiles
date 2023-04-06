@@ -122,7 +122,7 @@ our $SCHEMA = [
     {exit => ['Logout', 'system-lock-screen']},
 
     ## This option uses the default Openbox's "Exit" action
-    {item => ['shutdown -h now', 'Shutdown', 'application-exit']},
+    {item => ["$ENV{HOME}/.config/openbox/scripts/shutdown.py", 'Shutdown', 'application-exit']},
 
     ## This uses the 'oblogout' menu
     # {item => ['oblogout', 'Exit', 'application-exit']},
