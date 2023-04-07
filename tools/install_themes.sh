@@ -75,6 +75,11 @@ rm Catppuccin-Frappe-Standard-Maroon-Dark.zip
 
 
 ##======================
+#-- Icons
+sudo pacman -S papirus-icon-theme
+
+
+##======================
 #-- END
 cd $HOME
 script_print_notify "All successfully done.\n"

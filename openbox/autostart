@@ -25,4 +25,5 @@ tint2 &
 killall plank ; plank &
 
 ibus-daemon -drx &
+pa-applet &
 nitrogen --force-setter=xinerama --restore &

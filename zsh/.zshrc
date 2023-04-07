@@ -109,5 +109,6 @@ source $ZSH/oh-my-zsh.sh
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -ahlF'
+alias lt='ls -ahlFt'
 alias vi='nvim'
 alias lg='lazygit'
