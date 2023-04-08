@@ -67,6 +67,18 @@ mkdir $HOME/.themes
 
 ##======================
 #-- GTK
+#==
+#   changed color lists
+#   ----
+#   %s/#303446/#30343e/g
+#   %s/#232634/#23262c/g
+#   %s/#414559/#414551/g
+#   %s/#494c5c/#494c54/g
+#   %s/#515876/#51586e/g
+#   %s/rgba(48, 52, 70, 0.3)/rgba(48, 52, 62, 0.3)/g
+#   %s/rgba(65, 69, 89, 0.9)/rgba(65, 69, 81, 0.9)/g
+#   ----
+#/
 wget https://github.com/catppuccin/gtk/releases/download/v0.4.3/Catppuccin-Frappe-Standard-Maroon-Dark.zip
 unzip Catppuccin-Frappe-Standard-Maroon-Dark.zip -d $HOME/Documents/catppuccin-gtk/
 cp -rf $HOME/Documents/catppuccin-gtk/Catppuccin-Frappe-Standard-Maroon-Dark $HOME/.themes/
@@ -75,6 +87,21 @@ rm Catppuccin-Frappe-Standard-Maroon-Dark.zip
 
 ##======================
 #-- Openbox
+#==
+#   changed color lists
+#   ----
+#   %s/#303446/#30343e/g
+#   %s/#232634/#23262c/g
+#   %s/#414559/#414551/g
+#   %s/#a5adce/#a5adc6/g
+#   %s/#c6d0f5/#c6d0ed/g
+#   %s/#838ba7/#838b9f/g
+#   %s/#b5bfe2/#b5bfda/g
+#   %s/#626880/#626878/g
+#   %s/#737994/#73798c/g
+#   %s/#949cbb/#949cb3/g
+#   ----
+#/
 cp -rf $HOME/Documents/openbox-dotfiles/.themes/* $HOME/.themes/ || cp -rf ~/.config/.themes/* $HOME/.themes/
 
 
