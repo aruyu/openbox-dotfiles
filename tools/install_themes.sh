@@ -68,7 +68,7 @@ cp -rf $HOME/Documents/openbox-dotfiles/.themes $HOME/ || cp -rf ~/.config/.them
 
 ##======================
 #-- GTK
-wget https://github.com/catppuccin/gtk/releases/download/v0.4.1/Catppuccin-Frappe-Standard-Maroon-Dark.zip
+wget https://github.com/catppuccin/gtk/releases/download/v0.4.3/Catppuccin-Frappe-Standard-Maroon-Dark.zip
 unzip Catppuccin-Frappe-Standard-Maroon-Dark.zip -d $HOME/Documents/catppuccin-gtk/
 cp -rf $HOME/Documents/catppuccin-gtk/Catppuccin-Frappe-Standard-Maroon-Dark $HOME/.themes/
 rm Catppuccin-Frappe-Standard-Maroon-Dark.zip
