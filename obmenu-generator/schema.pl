@@ -107,8 +107,12 @@ our $SCHEMA = [
 
     ## The xrandr automake command
     {beg => ['Monitor Settings', 'applications-engineering']},
-      {pipe => ["$ENV{HOME}/.config/openbox/scripts/ob-randr.py", "Monitor", "applications-engineering"]},
-      {item => ["$ENV{HOME}/.config/openbox/scripts/save-randr.py", "Save Settings", "applications-engineering"]},
+      {item => ["sh -c 'killall tint2 ; tint2 && killall plank ; plank && nitrogen --force-setter=xinerama --restore'",
+                "Refresh", "applications-engineering"]},
+      {sep => undef},
+        {item => ["$ENV{HOME}/.config/openbox/scripts/save_randr.py", "Save Settings", "applications-engineering"]},
+        {pipe => ["$ENV{HOME}/.config/openbox/scripts/ob_randr.py", "Monitor", "applications-engineering"]},
+      {sep => undef},
     {end => undef},
 
     {sep => undef},

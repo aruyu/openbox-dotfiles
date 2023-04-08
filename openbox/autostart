@@ -19,9 +19,9 @@
 
 #bash $HOME/.config/screenrc &
 xfce4-power-manager &
-picom &
 
-tint2 &
+picom &
+killall tint2 ; tint2 &
 killall plank ; plank &
 
 ibus-daemon -drx &

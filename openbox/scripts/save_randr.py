@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
- *  NOTE      - save-randr.py
+ *  NOTE      - save_randr.py
  *  Author    - Asta
  *
  *  Created   - 2023.04.04
@@ -14,7 +14,7 @@ import subprocess
 
 def save_screenrc():
   """ Function to Save Screen RC """
-  
+
   xrandr_current = subprocess.run(["xrandr", "--current"], shell=True, text=True, stdout=subprocess.PIPE).stdout
   xrandr_current_list = xrandr_current.split('\n')
   xrandr_connected_index = []

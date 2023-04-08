@@ -112,3 +112,6 @@ alias ll='ls -ahlF'
 alias lt='ls -ahlFt'
 alias vi='nvim'
 alias lg='lazygit'
+
+# startswith Neofetch
+neofetch
