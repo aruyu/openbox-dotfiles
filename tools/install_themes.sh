@@ -61,9 +61,8 @@ make build
 sudo make install
 
 
-##======================
-#-- Openbox
-cp -rf $HOME/Documents/openbox-dotfiles/.themes $HOME/ || cp -rf ~/.config/.themes $HOME/
+##-----------------
+mkdir $HOME/.themes
 
 
 ##======================
@@ -72,6 +71,11 @@ wget https://github.com/catppuccin/gtk/releases/download/v0.4.3/Catppuccin-Frapp
 unzip Catppuccin-Frappe-Standard-Maroon-Dark.zip -d $HOME/Documents/catppuccin-gtk/
 cp -rf $HOME/Documents/catppuccin-gtk/Catppuccin-Frappe-Standard-Maroon-Dark $HOME/.themes/
 rm Catppuccin-Frappe-Standard-Maroon-Dark.zip
+
+
+##======================
+#-- Openbox
+cp -rf $HOME/Documents/openbox-dotfiles/.themes/* $HOME/.themes/ || cp -rf ~/.config/.themes/* $HOME/.themes/
 
 
 ##======================
