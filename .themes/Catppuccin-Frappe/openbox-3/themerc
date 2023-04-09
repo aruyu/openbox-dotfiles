@@ -1,11 +1,11 @@
 ####
-# based on 'https://github.com/catppuccin/openbox'
+# based by 'https://github.com/catppuccin/openbox'
 # edited by Asta
 ##
 # Menu
 
-menu.overlap.x:                                                     0
-menu.overlap.y:                                                     0
+menu.overlap.x:                                                   -15
+menu.overlap.y:                                                   -15
 menu.border.width:                                                  6
 menu.separator.width:                                               2
 menu.separator.padding.width:                                      10
@@ -52,8 +52,8 @@ osd.unhilight.bg.color:                                       #30343e
 # Window
 
 border.width:                                                       0
-padding.width:                                                     10
-padding.height:                                                    10
+padding.width:                                                     11
+padding.height:                                                    11
 window.handle.width:                                                2
 window.client.padding.width:                                        0
 window.client.padding.height:                                       0
