@@ -20,7 +20,7 @@
 #bash $HOME/.config/screenrc &
 xfce4-power-manager &
 
-picom &
+picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350  &
 killall tint2 ; tint2 &
 killall plank ; plank &
 
