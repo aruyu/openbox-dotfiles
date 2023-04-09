@@ -61,6 +61,14 @@ make build
 sudo make install
 
 
+##======================
+#-- SDDM
+git clone https://github.com/3ximus/aerial-sddm-theme.git $HOME/Documents/aerial-sddm-theme
+sudo cp -rf $HOME/Documents/aerial-sddm-theme /usr/share/sddm/themes/aerial
+sudo sed -i "s/^Current=.*/Current=aerial/g" /usr/lib/sddm/sddm.conf.d/default.conf
+sudo sed -i "s/^CursorTheme=.*/CursorTheme=oreo_spark_red_cursors/g" /usr/lib/sddm/sddm.conf.d/default.conf
+
+
 ##-----------------
 mkdir $HOME/.themes
 
