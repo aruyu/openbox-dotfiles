@@ -47,7 +47,7 @@ class DialogWindow(Gtk.Window):
     response = dialog.run()
 
     if response == Gtk.ResponseType.OK:
-      os.system("shutdown now")
+      os.system("shutdown -h now")
     elif response == Gtk.ResponseType.YES:
       os.system("shutdown -r now")
 
@@ -76,7 +76,7 @@ class CountdownThread(threading.Thread):
       self.label.set_text("The system will be shut down in {0} seconds.".format(self.time_out))
       time.sleep(1)
 
-    os.system("shutdown now")
+    os.system("shutdown -h now")
 
 
 if __name__ == '__main__':
