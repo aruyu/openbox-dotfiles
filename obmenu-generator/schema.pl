@@ -38,8 +38,8 @@ our $SCHEMA = [
     #{item => ['gmrun',            'Run command',  'system-run']},
 
     {sep => undef},
-    {item => ['scrot -s ~/Pictures/%b%d_%H%M%S.png -e "xclip -selection clipboard -t image/png -i $f"',          'Full ScreenShot', 'applications-engineering']},
-    {item => ['scrot --select -s ~/Pictures/%b%d_%H%M%S.png -e "xclip -selection clipboard -t image/png -i $f"', 'Grep ScreenShot', 'applications-engineering']},
+    {item => ["$ENV{HOME}/.config/openbox/scripts/full_screenshot.sh", "Full ScreenShot", "applications-engineering"]},
+    {item => ["$ENV{HOME}/.config/openbox/scripts/grep_screenshot.sh", "Grep ScreenShot", "applications-engineering"]},
 
     {sep => 'System'},
     {item => ['openbox --reconfigure', 'Refresh Openbox', 'openbox']},

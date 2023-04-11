@@ -179,32 +179,32 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
-    <keybind key="W-C-Left">
+    <keybind key="C-A-Left">
       <action name="SendToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-C-Right">
+    <keybind key="C-A-Right">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-C-Up">
+    <keybind key="C-A-Next">
       <action name="SendToDesktop">
-        <to>up</to>
+        <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-C-Down">
+    <keybind key="C-A-Prior">
       <action name="SendToDesktop">
-        <to>down</to>
+        <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
 
-    <keybind key="W-Left">
+    <keybind key="A-Left">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
@@ -212,7 +212,7 @@
       </action>
       <action name="MoveToEdge"><direction>west</direction></action>
     </keybind>
-    <keybind key="W-Right">
+    <keybind key="A-Right">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
@@ -220,24 +220,24 @@
       </action>
       <action name="MoveToEdge"><direction>east</direction></action>
     </keybind>
-    <keybind key="W-Up">
+    <keybind key="A-Up">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <height>50%</height>
       </action>
       <action name="MoveToEdge"><direction>north</direction></action>
     </keybind>
-    <keybind key="W-Down">
+    <keybind key="A-Down">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <height>50%</height>
       </action>
       <action name="MoveToEdge"><direction>south</direction></action>
     </keybind>
-    <keybind key="W-z">
+    <keybind key="A-z">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
-        <width>70%</width>
+        <width>65%</width>
         <height>70%</height>
       </action>
       <action name="MoveToEdge"><direction>west</direction></action>
@@ -247,50 +247,47 @@
         <y>60</y>
       </action>
     </keybind>
-    <keybind key="W-Return">
+    <keybind key="A-Return">
       <action name="ToggleMaximize"/>
     </keybind>
 
-    <keybind key="W-F1">
+    <keybind key="A-F1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="W-F2">
+    <keybind key="A-F2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="W-F3">
+    <keybind key="A-F3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-F4">
+    <keybind key="A-F4">
       <action name="GoToDesktop">
         <to>4</to>
       </action>
     </keybind>
-    <keybind key="W-A-Left">
-      <action name="GoToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="W-A-Right">
+    <keybind key="A-Next">
       <action name="GoToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-A-Up">
-      <action name="ToggleShowDesktop"/>
+    <keybind key="A-Prior">
+      <action name="GoToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
     </keybind>
-    <keybind key="W-A-Down">
+    <keybind key="A-Delete">
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="W-q">
+    <keybind key="A-q">
       <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
@@ -334,34 +331,43 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
+    <keybind key="A-S-Right">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Left">
+    <keybind key="A-S-Left">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Up">
+    <keybind key="A-S-Up">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Down">
+    <keybind key="A-S-Down">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="W-e">
+    <keybind key="A-S-3">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Konqueror</name>
+          <name>Full ScreenShot</name>
         </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
+        <command>~/.config/openbox/scripts/full_screenshot.sh</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-4">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Grep ScreenShot</name>
+        </startupnotify>
+        <command>~/.config/openbox/scripts/grep_screenshot.sh</command>
       </action>
     </keybind>
   </keyboard>
@@ -401,22 +407,22 @@
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
       </mousebind>
-      <mousebind button="W-A-Up" action="Click">
+      <mousebind button="A-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>
         </action>
       </mousebind>
-      <mousebind button="W-A-Down" action="Click">
+      <mousebind button="A-Down" action="Click">
         <action name="GoToDesktop">
           <to>next</to>
         </action>
       </mousebind>
-      <mousebind button="W-C-Up" action="Click">
+      <mousebind button="C-A-Up" action="Click">
         <action name="SendToDesktop">
           <to>previous</to>
         </action>
       </mousebind>
-      <mousebind button="W-C-Down" action="Click">
+      <mousebind button="C-A-Down" action="Click">
         <action name="SendToDesktop">
           <to>next</to>
         </action>

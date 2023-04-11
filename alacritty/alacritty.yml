@@ -300,7 +300,7 @@ bell:
 key_bindings:
   - { key: V,        mods: Alt,           action: Paste                        }
   - { key: C,        mods: Alt,           action: Copy                         }
-  - { key: N,        mods: Command,       action: SpawnNewInstance             }
+  - { key: W,        mods: Alt,           action: SpawnNewInstance             }
 #  - { key: Q,        mods: Control|Alt,   action: Quit                         }
 #  - { key: Return,   mods: Control|Alt,   action: ToggleFullscreen             }
 
