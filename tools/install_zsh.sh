@@ -56,7 +56,16 @@ UBUNTU=Ubuntu
 MAC=Mac
 FONT=Font
 
-read -p "Enter what you want to install (Arch, Ubuntu, Mac, Font): " CURRENT_JOB
+while true; do
+  read -p "Enter what you want to install (Arch, Ubuntu, Mac, Font): " CURRENT_JOB
+  case $SELECTION in
+    [Aa][Rr][Cc][Hh] )          CURRENT_JOB=Arch; break;;
+    [Uu][Bb][Uu][Nn][Tt][Uu] )  CURRENT_JOB=Ubuntu; break;;
+    [Mm][Aa][Cc] )              CURRENT_JOB=Mac; break;;
+    [Ff][Oo][Nn][Tt] )          CURRENT_JOB=Font; break;;
+    * )                         echo "Wrong answer.";;
+  esac
+done
 
 
 if [ $CURRENT_JOB = $ARCH ]; then
