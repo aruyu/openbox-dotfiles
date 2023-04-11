@@ -19,6 +19,7 @@ def save_screenrc():
   xrandr_current_list = xrandr_current.split('\n')
   xrandr_connected_index = []
   command = "xrandr"
+  retval = ""
 
   for key, value in enumerate(xrandr_current_list):
     if "connected" in value.split(' '):
@@ -41,17 +42,23 @@ def save_screenrc():
 
       command += " --output {0} --mode {1} --pos {2}x{3}".format(output_value, mode_value, pos_x_value, pos_y_value)
       print(mode_pos_list)
+      retval += "{0}: {1}".format(output_value, mode_value)
     else:
       command += " --output {0} --off".format(output_value)
+      retval += "{0}: Off".format(output_value)
+    retval += '\n'
 
-  print(command)
   home_directory = os.path.expanduser('~')
   script_file = open(home_directory+"/.config/screenrc", 'w')
   script_file.writelines('\n'.join(["#!/bin/bash", "", command]))
   script_file.close()
 
+  return retval
+
 if __name__ == '__main__':
   try:
-    save_screenrc()
+    command = save_screenrc()
+    os.system('notify-send --urgency low "Save Randr" "Current display successfully saved to ~/.config/screenrc.\n\n' + \
+              '[Current]\n' + command + '"')
   except:
-    raise
+    os.system('notify-send --urgency critical "Save Randr" "Failed to save display settings."')

@@ -1,5 +1,5 @@
 # Search
-@icon,,7,10,24,20,2,left,top,#000000 50,#000000 50,/home/asta/.config/jgmenu/greeneye-search.svg
+@icon,,7,10,24,20,2,left,top,#000000 50,#000000 50,/home/asta/.config/jgmenu/search.svg
 @search,,37,10,150,20,2,left,top,auto,#000000 0,Type to Search
 
 
@@ -11,6 +11,7 @@ Web Browser,xdg-open http://,web-browser
 Code,code,code-oss
 Xournal++,xournalpp,text-editor
 Media Player,ncmpcpp,multimedia-player
+Calculator,qalculate-gtk,accessories-calculator-symbolic
 ^sep()
 Applications,^checkout(apps)
 ^sep()
@@ -22,18 +23,18 @@ Exit,^checkout(exit),system-shutdown
 ^tag(exit)
 Logout,openbox --exit,system-log-out
 Suspend,systemctl -i suspend,system-reboot
-Shut Down,/home/asta/.config/jgmenu/scripts/shutdown.py,system-shutdown
+Shut Down,~/.config/jgmenu/scripts/shutdown.py,system-shutdown
 
 
 ## pipes
 ^tag(utilities)
-Full ScreenShot,scrot -s ~/Pictures/%b%d_%H%M%S.png -e "xclip -selection clipboard -t image/png -i $f",accessories-screenshot
-Grep ScreenShot,scrot --select -s ~/Pictures/%b%d_%H%M%S.png -e "xclip -selection clipboard -t image/png -i $f",accessories-screenshot
+Full ScreenShot,~/.config/openbox/scripts/full_screenshot.sh,accessories-screenshot
+Grep ScreenShot,~/.config/openbox/scripts/grep_screenshot.sh,accessories-screenshot
 
 ^tag(Display)
-Save Display Settings,/home/asta/.config/jgmenu/scripts/save_randr.py
+Save Display Settings,~/.config/jgmenu/scripts/save_randr.py
 ^sep()
-Display Settings,^pipe(jgmenu_run ob --cmd="/home/asta/.config/jgmenu/scripts/ob_randr.py"),applications-engineering
+Display Settings,^pipe(jgmenu_run ob --cmd="~/.config/jgmenu/scripts/ob_randr.py"),applications-engineering
 
 ^tag(apps)
 
