@@ -24,6 +24,6 @@ picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zo
 killall tint2 ; tint2 &
 killall plank ; plank &
 
-ibus-daemon -drx &
 pa-applet &
+ibus-daemon -drx &
 nitrogen --force-setter=xinerama --restore &

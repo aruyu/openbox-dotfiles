@@ -59,8 +59,8 @@ def mk_exe_node(output, name, command):
     # A small helper to speed the three-element PITA that is the Openbox execute menu syntax.
     CMD = 'xrandr --output %s ' % output
     nitrogen_restore = "nitrogen --force-setter=xinerama --restore"
-    plank_restore = "killall plank ; plank"
-    command_lists = "sh -c '" + CMD + command + " && " + nitrogen_restore + " && " + plank_restore + "'"
+    tint2_plank_restore = "killall tint2 ; tint2 & killall plank ; plank"
+    command_lists = "sh -c '" + CMD + command + " && " + nitrogen_restore + " && " + tint2_plank_restore + "'"
 
     item = etree.Element('item', label=name)
     action = etree.SubElement(item, 'action', name='execute')
@@ -103,13 +103,15 @@ def mk_rotate_node(output, name, command):
 
     CMD = 'xrandr --output %s ' % output
     nitrogen_restore = "nitrogen --force-setter=xinerama --restore"
+    tint2_plank_restore = "killall tint2 ; tint2 & killall plank ; plank"
+    command_lists = "sh -c '" + CMD + command + " && " + nitrogen_restore + \
+                    " && " + rotated[0] + " && " + rotated[1] + " && " + rotated[2] + \
+                    " && " + rotated[3] + " && " + rotated[4] + "'"
 
     item = etree.Element('item', label=name)
     action = etree.SubElement(item, 'action', name='execute')
 
-    etree.SubElement(action, 'command').text = "sh -c '" + CMD + command + " && " + nitrogen_restore + \
-                                               " && " + rotated[0] + " && " + rotated[1] + " && " + rotated[2] + \
-                                               " && " + rotated[3] + " && " + rotated[4] + "'"
+    etree.SubElement(action, 'command').text = command_lists
     #etree.SubElement(action, 'command').text = "sh -c '" + CMD + command + " && " + nitrogen_restore + "'"
 
     return item
