@@ -25,16 +25,18 @@ border_color_pressed = #23262c 30
 
 # Background 2: Iconified task
 rounded = 10
-border_width = 0
+border_width = 2
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #23262c 0
+background_color = #23262c 45
 border_color = #23262c 0
-background_color_hover = #23262c 0
-border_color_hover = #23262c 0
-background_color_pressed = #23262c 74
-border_color_pressed = #23262c 74
+gradient_id = 0
+background_color_hover = #23262c 45
+border_color_hover = #23262c 45
+background_color_pressed = #23262c 45
+border_color_pressed = #23262c 45
+gradient_id_pressed = 0
 
 # Background 3: Active task
 rounded = 10
@@ -70,13 +72,13 @@ border_width = 2
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #23262c 74
+background_color = #23262c 68
 border_color = #23262c 0
 gradient_id = 0
-background_color_hover = #23262c 74
-border_color_hover = #23262c 74
-background_color_pressed = #23262c 74
-border_color_pressed = #23262c 74
+background_color_hover = #23262c 68
+border_color_hover = #23262c 68
+background_color_pressed = #23262c 68
+border_color_pressed = #23262c 68
 gradient_id_pressed = 0
 
 #-------------------------------------
@@ -122,7 +124,7 @@ taskbar_always_show_all_desktop_tasks = 0
 taskbar_name_padding = 4 2
 taskbar_name_background_id = 5
 taskbar_name_active_background_id = 3
-taskbar_name_font = Cantarell 10
+taskbar_name_font = Cantarell 9
 taskbar_name_font_color = #c6d0ed 100
 taskbar_name_active_font_color = #ffffff 100
 taskbar_distribute_size = 0
