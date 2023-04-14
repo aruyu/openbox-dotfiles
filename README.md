@@ -18,7 +18,7 @@ git clone https://github.com/aruyu/openbox-dotfiles.git ~/Documents/openbox-dotf
 > Use rsync to sync the dotfiles.
 
 ```bash
-rsync -avxHAXP --exclude={'.*','tools','LICENSE','*.md'} ~/Documents/openbox-dotfiles/* ~/.config/
+rsync -avxHAXP --include={'zsh','.zshrc'} --exclude={'.*','tools','LICENSE','*.md'} ~/Documents/openbox-dotfiles/* ~/.config/
 ```
 
 > Run *'install.sh'* to install essentials.
