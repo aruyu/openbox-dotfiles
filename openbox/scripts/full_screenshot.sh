@@ -1,10 +1,10 @@
 #!/bin/bash
 #==
 #   NOTE      - full_screenshot.sh
-#   Author    - Asta
+#   Author    - Aru
 #
 #   Created   - 2023.04.10
-#   Github    - https://github.com/astaos
+#   Github    - https://github.com/aruyu
 #   Contact   - vine9151@gmail.com
 #/
 

@@ -1,10 +1,10 @@
 #!/bin/bash
 #==
 #   NOTE      - install_zsh.sh
-#   Author    - Asta
+#   Author    - Aru
 #
 #   Created   - 2022.10.19
-#   Github    - https://github.com/astaos
+#   Github    - https://github.com/aruyu
 #   Contact   - vine9151@gmail.com
 #/
 

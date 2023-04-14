@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 """
  *  NOTE      - save_randr.py
- *  Author    - Asta
+ *  Author    - Aru
  *
  *  Created   - 2023.04.04
- *  Github    - https://github.com/astaos
+ *  Github    - https://github.com/aruyu
  *  Contact   - vine9151@gmail.com
 """
 

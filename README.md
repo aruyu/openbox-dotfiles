@@ -12,7 +12,7 @@ Custom dotfiles for Openbox desktop setting which includes ZSH.
 #### Clone the repository to *'~/Documents'* and install with rsync.
 
 ```bash
-git clone https://github.com/astaos/openbox-dotfiles.git ~/Documents/openbox-dotfiles/
+git clone https://github.com/aruyu/openbox-dotfiles.git ~/Documents/openbox-dotfiles/
 ```
 
 > Use rsync to sync the dotfiles.
@@ -36,7 +36,7 @@ bash ~/Documents/openbox-dotfiles/tools/install_zsh.sh
 #### Clone the repository to *'~/.config'* directly.
 
 ```bash
-git clone https://github.com/astaos/openbox-dotfiles.git ~/.config
+git clone https://github.com/aruyu/openbox-dotfiles.git ~/.config
 ```
 
 > Run *'install.sh'* to install essentials.
