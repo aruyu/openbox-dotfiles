@@ -141,27 +141,27 @@ window.active.button.desk.toggled.hover.image.color:          #414551
 window.active.button.desk.toggled.pressed.image.color:        #949cb3
 window.active.button.desk.toggled.unpressed.image.color:      #949cb3
 
-window.inactive.button.iconify.hover.image.color:             #414551
+window.inactive.button.iconify.hover.image.color:             #838b9f
 window.inactive.button.iconify.pressed.image.color:           #838b9f
 window.inactive.button.iconify.disabled.image.color:          #626878
 window.inactive.button.iconify.unpressed.image.color:         #838b9f
-window.inactive.button.iconify.toggled.hover.image.color:     #414551
+window.inactive.button.iconify.toggled.hover.image.color:     #838b9f
 window.inactive.button.iconify.toggled.pressed.image.color:   #838b9f
 window.inactive.button.iconify.toggled.unpressed.image.color: #838b9f
 
-window.inactive.button.max.hover.image.color:                 #414551
+window.inactive.button.max.hover.image.color:                 #838b9f
 window.inactive.button.max.pressed.image.color:               #838b9f
 window.inactive.button.max.disabled.image.color:              #626878
 window.inactive.button.max.unpressed.image.color:             #838b9f
-window.inactive.button.max.toggled.hover.image.color:         #414551
+window.inactive.button.max.toggled.hover.image.color:         #838b9f
 window.inactive.button.max.toggled.pressed.image.color:       #838b9f
 window.inactive.button.max.toggled.unpressed.image.color:     #838b9f
 
-window.inactive.button.close.hover.image.color:               #414551
+window.inactive.button.close.hover.image.color:               #838b9f
 window.inactive.button.close.pressed.image.color:             #838b9f
 window.inactive.button.close.disabled.image.color:            #626878
 window.inactive.button.close.unpressed.image.color:           #838b9f
-window.inactive.button.close.toggled.hover.image.color:       #414551
+window.inactive.button.close.toggled.hover.image.color:       #838b9f
 window.inactive.button.close.toggled.pressed.image.color:     #838b9f
 window.inactive.button.close.toggled.unpressed.image.color:   #838b9f
 
