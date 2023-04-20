@@ -1,5 +1,5 @@
 # Search
-@icon,,7,10,24,20,2,left,top,#000000 50,#000000 50,/home/asta/.config/jgmenu/search.svg
+@icon,,7,10,24,20,2,left,top,#000000 50,#000000 50,/home/aru/.config/jgmenu/search.svg
 @search,,37,10,150,20,2,left,top,auto,#000000 0,Type to Search
 
 
@@ -22,7 +22,7 @@ Lock Screen,bl-lock,system-lock-screen
 Exit,^checkout(exit),system-shutdown
 ^tag(exit)
 Logout,openbox --exit,system-log-out
-Suspend,systemctl -i suspend,system-reboot
+Reboot,~/.config/jgmenu/scripts/reboot.py,system-reboot
 Shut Down,~/.config/jgmenu/scripts/shutdown.py,system-shutdown
 
 

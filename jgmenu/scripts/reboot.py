@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
- *  NOTE      - shutdown.py
+ *  NOTE      - reboot.py
  *  Author    - Aru
  *
- *  Created   - 2023.04.04
+ *  Created   - 2023.04.19
  *  Github    - https://github.com/aruyu
  *  Contact   - vine9151@gmail.com
 """
@@ -17,11 +17,11 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk,GLib
 
 
-class ShutdownDialog(Gtk.Dialog):
+class RebootDialog(Gtk.Dialog):
   def __init__(self, parent):
-    super().__init__(title="Shut Down", transient_for=parent, flags=0)
+    super().__init__(title="Reboot", transient_for=parent, flags=0)
     self.add_button("Cancel", Gtk.ResponseType.CANCEL)
-    self.add_button("Shutdown", Gtk.ResponseType.OK)
+    self.add_button("   Reboot   ", Gtk.ResponseType.OK)
 
     self.set_default_size(350, 100)
 
@@ -42,11 +42,11 @@ class DialogWindow(Gtk.Window):
     self.on_button_clicked()
 
   def on_button_clicked(self):
-    dialog = ShutdownDialog(self)
+    dialog = RebootDialog(self)
     response = dialog.run()
 
     if response == Gtk.ResponseType.OK:
-      os.system("halt --poweroff")
+      os.system("halt --reboot")
 
     dialog.destroy()
 
@@ -70,10 +70,10 @@ class CountdownThread(threading.Thread):
 
     while self.time_out:
       self.time_out -= 1
-      self.label.set_text("The system will be shut down in {0} seconds.".format(self.time_out))
+      self.label.set_text("The system will be reboot in {0} seconds.".format(self.time_out))
       time.sleep(1)
 
-    os.system("halt --poweroff")
+    os.system("halt --reboot")
 
 
 if __name__ == '__main__':
