@@ -81,9 +81,24 @@ background_color_pressed = #23262c 68
 border_color_pressed = #23262c 68
 gradient_id_pressed = 0
 
+# Background 6: Others
+rounded = 10
+border_width = 2
+border_sides = TB
+border_content_tint_weight = 0
+background_content_tint_weight = 0
+background_color = #23262c 68
+border_color = #23262c 0
+gradient_id = 0
+background_color_hover = #23262c 68
+border_color_hover = #23262c 68
+background_color_pressed = #23262c 68
+border_color_pressed = #23262c 68
+gradient_id_pressed = 0
+
 #-------------------------------------
 # Panel
-panel_items = PETEEEBSC
+panel_items = PETEEBSC
 panel_size = 100% 35
 panel_margin = 0 0
 panel_padding = 1 1 0
@@ -209,7 +224,7 @@ battery_font_color = #c6d0ed 100
 bat1_format = 
 bat2_format = 
 battery_padding = 8 0
-battery_background_id = 5
+battery_background_id = 6
 battery_hide = 101
 battery_lclick_command = 
 battery_rclick_command = 
@@ -218,6 +233,22 @@ battery_uwheel_command =
 battery_dwheel_command = 
 ac_connected_cmd = notify-send --urgency low "Plugged in AC"
 ac_disconnected_cmd = notify-send --urgency low "Unplugged AC"
+
+#-------------------------------------
+# Button 1
+button = new
+button_icon = jgmenu
+button_text = 
+button_lclick_command = jgmenu_run
+button_rclick_command = jgmenu_run
+button_mclick_command = 
+button_uwheel_command = 
+button_dwheel_command = 
+button_font_color = #000000 100
+button_padding = 6 4
+button_background_id = 5
+button_centered = 0
+button_max_icon_size = 0
 
 #-------------------------------------
 # Executor 1
@@ -246,7 +277,7 @@ execp_icon_h = 0
 #-------------------------------------
 # Executor 2
 execp = new
-execp_command = psuinfo -CatMf
+execp_command = psuinfo -CaMtf
 execp_interval = 2
 execp_has_icon = 0
 execp_cache_icon = 1
@@ -268,20 +299,28 @@ execp_icon_w = 0
 execp_icon_h = 0
 
 #-------------------------------------
-# Button 1
-button = new
-button_icon = jgmenu
-button_text = 
-button_lclick_command = jgmenu_run
-button_rclick_command = jgmenu_run
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
-button_font_color = #000000 100
-button_padding = 6 4
-button_background_id = 5
-button_centered = 0
-button_max_icon_size = 0
+# Executor 3
+execp = new
+execp_command = $HOME/.config/tint2/scripts/battery-icon.sh
+execp_interval = 30
+execp_has_icon = 1
+execp_cache_icon = 1
+execp_continuous = 1
+execp_markup = 1
+execp_monitor = all
+execp_tooltip = 
+execp_lclick_command = 
+execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = Cantarell 10
+execp_font_color = #c6d0ed 100
+execp_padding = 2 0
+execp_background_id = 6
+execp_centered = 0
+execp_icon_w = 20
+execp_icon_h = 20
 
 #-------------------------------------
 # Tooltip
