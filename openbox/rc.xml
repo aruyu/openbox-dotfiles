@@ -352,6 +352,24 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
+    <keybind key="C-A-t">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Terminal</name>
+        </startupnotify>
+        <command>alacritty</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-Delete">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>SysMonTask</name>
+        </startupnotify>
+        <command>sysmontask</command>
+      </action>
+    </keybind>
     <keybind key="A-S-3">
       <action name="Execute">
         <startupnotify>
