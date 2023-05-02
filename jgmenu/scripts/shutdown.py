@@ -21,6 +21,7 @@ class ShutdownDialog(Gtk.Dialog):
   def __init__(self, parent):
     super().__init__(title="Shut Down", transient_for=parent, flags=0)
     self.add_button("Cancel", Gtk.ResponseType.CANCEL)
+    self.add_button("Reboot", Gtk.ResponseType.YES)
     self.add_button("Shutdown", Gtk.ResponseType.OK)
 
     self.set_default_size(350, 100)
@@ -46,7 +47,9 @@ class DialogWindow(Gtk.Window):
     response = dialog.run()
 
     if response == Gtk.ResponseType.OK:
-      os.system("halt --poweroff")
+      os.system("sync ; sync ; sync ; sync ; halt --poweroff")
+    elif response == Gtk.ResponseType.YES:
+      os.system("sync ; sync ; sync ; sync ; halt --reboot")
 
     dialog.destroy()
 
@@ -59,7 +62,7 @@ def quit_time_out():
 class CountdownThread(threading.Thread):
   """ Class of Countdown Thread. """
 
-  def __init__(self, name=0, time_out=31):
+  def __init__(self, name=0, time_out=61):
     super().__init__()
     self.name = name
     self.time_out = time_out
@@ -73,7 +76,7 @@ class CountdownThread(threading.Thread):
       self.label.set_text("The system will be shut down in {0} seconds.".format(self.time_out))
       time.sleep(1)
 
-    os.system("halt --poweroff")
+    os.system("sync ; sync ; sync ; sync ; halt --poweroff")
 
 
 if __name__ == '__main__':

@@ -31,25 +31,40 @@ def save_screenrc():
 
     if base_value[2] == "primary":
       mode_pos_list = base_value[3]
+      rotate_list = base_value[4]
     else:
       mode_pos_list = base_value[2]
+      rotate_list = base_value[3]
 
     if not mode_pos_list.startswith('('):
       mode_pos_list = mode_pos_list.split('+')
-      mode_value = mode_pos_list[0]
+
+      mode_list = mode_pos_list[0]
+      mode_list = mode_list.split('x')
+      mode_x_value = mode_list[0]
+      mode_y_value = mode_list[1]
+
+      if int(mode_x_value) < int(mode_y_value):
+        mode_x_value, mode_y_value = mode_y_value, mode_x_value
+      mode_value = mode_x_value + 'x' + mode_y_value
+
       pos_x_value = mode_pos_list[1]
       pos_y_value = mode_pos_list[2]
 
-      command += " --output {0} --mode {1} --pos {2}x{3}".format(output_value, mode_value, pos_x_value, pos_y_value)
-      print(mode_pos_list)
-      retval += "{0}: {1}".format(output_value, mode_value)
+      if not rotate_list.startswith('('):
+        rotate_value = rotate_list
+      else:
+        rotate_value = "normal"
+
+      command += " --output {0} --mode {1} --pos {2}x{3} --rotate {4}".format(output_value, mode_value, pos_x_value, pos_y_value, rotate_value)
+      retval += "{0}: {1} ({2})".format(output_value, mode_value, rotate_value)
     else:
       command += " --output {0} --off".format(output_value)
       retval += "{0}: Off".format(output_value)
     retval += '\n'
 
   home_directory = os.path.expanduser('~')
-  script_file = open(home_directory+"/.config/screenrc", 'w')
+  script_file = open(home_directory+"/.screenlayout/rcscript", 'w')
   script_file.writelines('\n'.join(["#!/bin/bash", "", command]))
   script_file.close()
 
@@ -58,7 +73,13 @@ def save_screenrc():
 if __name__ == '__main__':
   try:
     command = save_screenrc()
-    os.system('notify-send --urgency low "Save Randr" "Current display successfully saved to ~/.config/screenrc.\n\n' + \
-              '[Current]\n' + command + '"')
   except:
-    os.system('notify-send --urgency critical "Save Randr" "Failed to save display settings."')
+    try:
+      os.system('mkdir ~/.screenlayout')
+      command = save_screenrc()
+    except:
+      os.system('notify-send --urgency critical "Save Randr" "Failed to save display settings."')
+      raise
+  finally:
+    os.system('notify-send "Save Randr" "Current display successfully saved to ~/.screenlayout/rcscript.\n\n' + \
+              '[Current]\n' + command + '"')

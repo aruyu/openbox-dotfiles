@@ -46,7 +46,7 @@ class DialogWindow(Gtk.Window):
     response = dialog.run()
 
     if response == Gtk.ResponseType.OK:
-      os.system("halt --reboot")
+      os.system("sync ; sync ; sync ; sync ; halt --reboot")
 
     dialog.destroy()
 
@@ -73,7 +73,7 @@ class CountdownThread(threading.Thread):
       self.label.set_text("The system will be reboot in {0} seconds.".format(self.time_out))
       time.sleep(1)
 
-    os.system("halt --reboot")
+    os.system("sync ; sync ; sync ; sync ; halt --reboot")
 
 
 if __name__ == '__main__':
