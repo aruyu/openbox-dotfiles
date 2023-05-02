@@ -17,13 +17,15 @@
 #xfce-mcs-manager &
 
 
-#bash $HOME/.config/screenrc &
+#bash $HOME/.screenlayout/rcscript &
 xfce4-power-manager &
 
 picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350  &
 killall tint2 ; tint2 &
 killall plank ; plank &
 
-pa-applet &
+killall pa-applet ; pa-applet &
+killall nm-applet ; nm-applet &
+killall blueman-applet ; blueman-applet &
 ibus-daemon -drx &
 nitrogen --force-setter=xinerama --restore &

@@ -56,6 +56,7 @@ fi
 #-- Cursor
 git clone https://github.com/varlesh/oreo-cursors.git $HOME/Documents/oreo-cursors/
 cd $HOME/Documents/oreo-cursors/
+sed -i "/^64/d" ./src/config/*
 ruby generator/convert.rb || error_exit "Installation Faild... ruby needed."
 make build
 sudo make install
