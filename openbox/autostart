@@ -27,5 +27,4 @@ killall plank ; plank &
 killall pa-applet ; pa-applet &
 killall nm-applet ; nm-applet &
 killall blueman-applet ; blueman-applet &
-ibus-daemon -drx &
 nitrogen --force-setter=xinerama --restore &
