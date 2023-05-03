@@ -12,7 +12,7 @@
 
 function error_exit()
 {
-  notify-send --urgency critical "Scrot" "Canceled to capture Grep ScreenShot."
+  notify-send --urgency critical "Scrot" "Canceled to capture Grep ScreenShot." --icon="accessories-screenshot"
   exit 1
 }
 
@@ -25,4 +25,4 @@ if [[ ! -d "${SAVE_DIR}" ]]; then
 fi
 
 scrot --select --freeze ${SAVE_DIR}${TIME}.png -e 'xclip -selection clipboard -t image/png -i $f' || error_exit
-notify-send --urgency low "Scrot" "Grep ScreenShot successfully saved to\n${SAVE_DIR}${TIME}.png."
+notify-send --urgency low "Scrot" "Grep ScreenShot successfully saved to\n${SAVE_DIR}${TIME}.png." --icon="accessories-screenshot"

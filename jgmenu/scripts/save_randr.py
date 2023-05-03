@@ -78,8 +78,8 @@ if __name__ == '__main__':
       os.system('mkdir ~/.screenlayout')
       command = save_screenrc()
     except:
-      os.system('notify-send --urgency critical "Save Randr" "Failed to save display settings."')
+      os.system('notify-send --urgency critical "Save Display" "Failed to save display settings." --icon="tint2"')
       raise
   finally:
-    os.system('notify-send "Save Randr" "Current display successfully saved to ~/.screenlayout/rcscript.\n\n' + \
-              '[Current]\n' + command + '"')
+    os.system('notify-send "Save Display" "Current display successfully saved to ~/.screenlayout/rcscript.\n\n' + \
+              '[Current]\n' + command + '" --icon="tint2"')

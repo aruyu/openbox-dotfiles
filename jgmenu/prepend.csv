@@ -6,7 +6,7 @@
 # Main Menu
 ^sep()
 Terminal,alacritty,utilities-terminal
-File manager,xdg-open .,system-file-manager
+File Manager,xdg-open .,system-file-manager
 Web Browser,xdg-open http://,web-browser
 Code,code,code-oss
 Xournal++,xournalpp,text-editor
