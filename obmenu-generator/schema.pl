@@ -32,17 +32,19 @@ our $SCHEMA = [
     {sep => 'QUICK MENU'},
 
     #          COMMAND                 LABEL              ICON
-    {item => ['alacritty',        'Open Terminal','utilities-terminal']},
-    {item => ['xdg-open .',       'File Manager', 'system-file-manager']},
-    {item => ['xdg-open http://', 'Web Browser',  'web-browser']},
-    #{item => ['gmrun',            'Run command',  'system-run']},
+    {item => ['alacritty',          'Open Terminal',  'utilities-terminal']},
+    {item => ['xdg-open ./Desktop', 'File Manager',   'system-file-manager']},
+    #{item => ['xdg-open http://',   'Web Browser',    'web-browser']},
+    #{item => ['gmrun',              'Run command',    'system-run']},
+
+    {sep => undef},
+    {item => ['nitrogen', 'Change Background', 'nitrogen']},
 
     {sep => undef},
     {item => ["$ENV{HOME}/.config/openbox/scripts/full_screenshot.sh", "Full ScreenShot", "applications-engineering"]},
     {item => ["$ENV{HOME}/.config/openbox/scripts/grep_screenshot.sh", "Grep ScreenShot", "applications-engineering"]},
 
     {sep => 'System'},
-    {item => ['nitrogen', 'Change Background', 'nitrogen']},
     {item => ['openbox --reconfigure', 'Refresh Openbox', 'openbox']},
     {item => ["sh -c 'killall tint2 ; tint2 && killall plank ; plank && nitrogen --force-setter=xinerama --restore'",
               "Refresh Display", "applications-engineering"]},
