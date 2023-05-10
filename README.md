@@ -1,6 +1,6 @@
 # Openbox Dotfiles
 
-Custom dotfiles for Openbox desktop setting which includes ZSH.
+Custom dotfiles for Openbox WM for xorg with ZSH.
 
 ## Installation
 
