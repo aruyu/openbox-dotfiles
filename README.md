@@ -18,7 +18,7 @@ git clone https://github.com/aruyu/openbox-dotfiles.git ~/Documents/openbox-dotf
 > Use rsync to sync the dotfiles.
 
 ```bash
-rsync -avxHAXP --include={'zsh','.zshrc'} --exclude={'.*','tools','LICENSE','*.md'} ~/Documents/openbox-dotfiles/* ~/.config/
+rsync -avxHAXP --exclude={'.git*','tools','LICENSE','*.md'} ~/Documents/openbox-dotfiles/. ~/
 ```
 
 > Run *'install.sh'* to install essentials.
@@ -36,14 +36,15 @@ bash ~/Documents/openbox-dotfiles/tools/install_zsh.sh
 #### Clone the repository to *'~/.config'* directly.
 
 ```bash
-git clone https://github.com/aruyu/openbox-dotfiles.git ~/.config
+git clone https://github.com/aruyu/openbox-dotfiles.git ~/Downloads/openbox-dotfiles/
+cp -rf ~/Downloads/openbox-dotfiles/.* ~/
 ```
 
 > Run *'install.sh'* to install essentials.
 
 ```bash
-bash ~/.config/tools/install_themes.sh
-bash ~/.config/tools/install_zsh.sh
+bash ~/Downloads/openbox-dotfiles/tools/install_themes.sh
+bash ~/Downloads/openbox-dotfiles/tools/install_zsh.sh
 ```
 
 </details>

@@ -80,7 +80,7 @@ if [ $CURRENT_JOB = $ARCH ]; then
 EOF
 
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  cp $HOME/.config/zsh/.zshrc $HOME
+  curl -o $HOME/.config/zsh/.zshrc https://raw.githubusercontent.com/aruyu/openbox-dotfiles/master/.zshrc
   zsh
 
 elif [ $CURRENT_JOB = $UBUNTU ]; then
@@ -95,7 +95,7 @@ elif [ $CURRENT_JOB = $UBUNTU ]; then
 EOF
 
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  cp $HOME/.config/zsh/.zshrc $HOME
+  curl -o $HOME/.config/zsh/.zshrc https://raw.githubusercontent.com/aruyu/openbox-dotfiles/master/.zshrc
   zsh
 
 elif [ $CURRENT_JOB = $MAC ]; then
@@ -109,7 +109,7 @@ elif [ $CURRENT_JOB = $MAC ]; then
 EOF
 
   git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  cp $HOME/.config/zsh/.zshrc $HOME
+  curl -o $HOME/.config/zsh/.zshrc https://raw.githubusercontent.com/aruyu/openbox-dotfiles/master/.zshrc
   zsh
 
 elif [ $CURRENT_JOB = $FONT ]; then
